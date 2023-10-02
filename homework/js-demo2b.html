@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Second Web Page</title>
+    <link rel="stylesheet" href="demo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function (event) {
+                // Sample data (replace this with your actual data)
+                var headings = ["Heading 1", "Heading 2", "Heading 3", "Heading 4", "Heading 5"];
+                var calories = ["Calories 1", "Calories 2", "Calories 3", "Calories 4", "Calories 5"];
+                var fat = ["Fat 1", "Fat 2", "Fat 3", "Fat 4", "Fat 5"];
+                var venue = ["Venue 1", "Venue 2", "Venue 3", "Venue 4", "Venue 5"];
+
+                // Update table rows with data
+                for (var i = 0; i < headings.length; i++) {
+                    $("#showheading td:eq(" + i + ")").text(headings[i]);
+                    $("#showcalories td:eq(" + i + ")").text(calories[i]);
+                    $("#showfat td:eq(" + i + ")").text(fat[i]);
+                    $("#showven td:eq(" + i + ")").text(venue[i]);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>My Web Site Brand</header>
+        <nav>
+            <ul>
+                <li><a href="js-demo2.html">Home</a></li>
+                <li><a href="js-demo2b.html">About</a></li>
+                <li><a href="js-demo2d.html">Gallery</a></li>
+                <li><a href="js-demo2c.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>My Second Heading</h1>
+            <p>My Second paragraph.</p>
+
+            <table>
+                <caption>CALORIES COMPARISON OF POPULAR BURGERS</caption>
+                <thead>
+                    <tr id="showheading">
+                        <th>Type</th>
+                        <th>BigMac</th>
+                        <th>Whopper</th>
+                        <th>Dave's Double</th>
+                        <th>Whataburger</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="showcalories">
+                        <td>Calories</td>
+                        <td>563</td>
+                        <td>677</td>
+                        <td>870</td>
+                        <td>590</td>
+                    </tr>
+                    <tr id="showfat">
+                        <td>Fat</td>
+                        <td>30gm</td>
+                        <td>40gm</td>
+                        <td>51gm</td>
+                        <td>25gm</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr id="showven">
+                        <td>Vendor</td>
+                        <td>MacD</td>
+                        <td>Burger King</td>
+                        <td>Wendys</td>
+                        <td>Whataburger</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <input type="button" id="btn" value="Load Data" style="margin-top:20px;" />
+        </main>
+
+        <footer>&copy; Copyright 2020</footer>
+
+    </div>
+
+</body>
+
+</html>
